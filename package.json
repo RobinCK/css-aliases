@@ -1,6 +1,6 @@
 {
   "name": "css-aliases",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lets you create custom aliases for CSS,less and SASS properties with an @alias rule",
   "main": "index.js",
   "scripts": {
