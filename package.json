@@ -24,5 +24,11 @@
     "url",
     "import"
   ],
-  "homepage": "https://github.com/RobinCK/css-aliases#readme"
+  "homepage": "https://github.com/RobinCK/css-aliases#readme",
+  "dependencies": {
+    "css": "^2.2.1",
+    "path": "^0.12.7",
+    "rework": "^1.0.1",
+    "rework-plugin-url": "^1.1.0"
+  }
 }
