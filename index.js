@@ -12,6 +12,7 @@ module.exports = function (css, resourcePath, aliases) {
     return css;
 
     function resolve(url, resourcePath) {
+
         for (var aliasName in aliases) {
             var regExp = new RegExp('^' + aliasName + '(.*)')
 
@@ -24,16 +25,23 @@ module.exports = function (css, resourcePath, aliases) {
     }
 
     function parse(css, regex) {
-        var m, importOriginal, importReplace;
+        var m, importOriginal, importReplace, replace = [];
 
         while ((m = regex.exec(css)) !== null) {
             if (m.index === regex.lastIndex) {
                 regex.lastIndex++;
             }
 
+            replace.push(m);
+        }
+
+        for (var item in replace) {
+            var m = replace[item];
+
             importOriginal = '';
             importReplace = '';
             var mathGroups = m.groups();
+
             for (var groupName in mathGroups) {
                 var match = mathGroups[groupName];
                 importOriginal += typeof match !== 'undefined' ? match : '';
@@ -41,7 +49,7 @@ module.exports = function (css, resourcePath, aliases) {
                 if (groupName !== 'url') {
                     importReplace += typeof match !== 'undefined' ? match : '';
                 } else {
-                    importReplace += resolve(match, '.');
+                    importReplace += resolve(match, resourcePath);
                 }
             }
 
