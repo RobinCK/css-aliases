@@ -5,7 +5,7 @@ var namedRegexp = require('named-js-regexp');
 
 module.exports = function (css, resourcePath, aliases) {
   var IMPORT_REGEX = namedRegexp(/^(:<import>@import\s+)(:<url_tag_open>url\()?\s*(:<quote_open>"|')(:<url>.+)\s*(:<quote_close>"|')(:<url_tag_close>\))?(:<context>.*);$/gm);
-  var URL_REGEX = namedRegexp(/(:<url_tag_open>url\()\s*(:<quote_open>"|')?(:<url>.+)\s*(:<quote_close>"|')?(:<url_tag_close>\))/gm);
+  var URL_REGEX = namedRegexp(/(:<url_tag_open>url\()\s*(:<quote_open>"|')?(:<url>.+?)\s*(:<quote_close>"|')?(:<url_tag_close>\))/gm);
   css = parse(css, IMPORT_REGEX);
   css = parse(css, URL_REGEX);
 
