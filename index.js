@@ -17,7 +17,7 @@ module.exports = function (css, resourcePath, aliases) {
       var regExp = new RegExp('^' + aliasName + '(.*)');
 
       if (regExp.test(url)) {
-        return path.relative(path.dirname(resourcePath), path.resolve(aliases[aliasName] + url.replace(regExp, '$1')));
+        return path.relative(path.dirname(resourcePath), path.resolve(aliases[aliasName] + url.replace(regExp, '$1'))).replace(/\\/g, '/');
       }
     }
 
