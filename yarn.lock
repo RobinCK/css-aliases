@@ -559,8 +559,8 @@ mute-stream@0.0.5:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
 named-js-regexp@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/named-js-regexp/-/named-js-regexp-1.3.2.tgz#967779b923c2381e243a97cb8a39413141def241"
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/named-js-regexp/-/named-js-regexp-1.3.5.tgz#d0da4d3c67259e9d10e85a2b4f35d6c949d69383"
 
 natural-compare@^1.4.0:
   version "1.4.0"
