@@ -33,6 +33,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^6.1.0"
   }
 }
