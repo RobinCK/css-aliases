@@ -1,7 +1,3 @@
-<div align="center">
-[![NPM version](https://img.shields.io/npm/v/css-aliases.svg?style=flat-square)](https://www.npmjs.com/package/css-aliases)
-</div>
-
 # css-aliases
 
 ## Install
